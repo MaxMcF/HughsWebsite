@@ -1,0 +1,29 @@
+{%load static%}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+  <!-- <link rel='stylesheet', href="{% static 'main.scss' %}"> -->
+  <title>Banh Mi Me!</title>
+</head>
+<body>
+  <header>
+    <h1 class="page-header">Bahn Mi Me</h1>
+    <nav>
+      <ul>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'product_view' %}">Products</a></li>
+        {% comment %} <li><a href="{% url 'about_us' %}">About Us</a></li> {% endcomment %}
+        {% comment %} <li><a href="{% url '' %}">Contact</a></li> {% endcomment %}
+      </ul>
+    </nav>
+  </header>
+  <main>
+    {% block content %}
+    <h3>No Content</h3>
+    {% endblock content %}
+  </main>
+</body>
+</html>

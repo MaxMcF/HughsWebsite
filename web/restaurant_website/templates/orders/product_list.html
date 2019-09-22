@@ -1,0 +1,14 @@
+{% extends "generic/home.html" %}
+
+{% block content %}
+{% for product in products %}
+  <h2>{{ product.product_name }}</h2>
+  <p>{{ product.price }}</p>
+  <p>{{ product.product_description }}</p>
+  {% comment %} {% for transaction in transactions %}
+    {% if transaction.product == product %}
+    <p><a href="{% url 'transaction_view' id=transaction.id %}">{{ transaction.description }}</a></p>
+    {% endif %}
+  {% endfor %} {% endcomment %}
+{% endfor %}
+{% endblock content %}
